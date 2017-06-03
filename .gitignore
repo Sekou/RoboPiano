@@ -1,2 +1,4 @@
 /RoboPiano/obj/*
+*.exe.manifest
 !*.dll
+!*.exe
