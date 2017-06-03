@@ -25,8 +25,8 @@ namespace RoboPiano
 
         void clear_temp()
         {
+            Helper.CheckCreateDir(temp);
             var di = new DirectoryInfo(temp);
-            if(!di.Exists)Helper.CorrectPath(temp);
             foreach (FileInfo file in di.GetFiles())
             {
                 file.Delete();

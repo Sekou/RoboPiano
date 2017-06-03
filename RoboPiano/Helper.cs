@@ -171,6 +171,13 @@ namespace RoboPiano
             x = x.Replace("/", "\\");
             return x;
         }
+        public static void CheckCreateDir(string path)
+        {
+            bool Exists = Directory.Exists(path);
+            if (!Exists)
+                System.IO.Directory.CreateDirectory(path);
+        }
+
 
         public static void UnZipFile(string in_path, string out_dir, bool remove_text_in_sq_brackets)
         {
